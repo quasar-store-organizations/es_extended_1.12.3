@@ -1,7 +1,7 @@
 Config = {}
 
 -- for ox inventory, this will automatically be adjusted, do not change! for other inventories, change to "resource_name"
-Config.CustomInventory = false
+Config.CustomInventory = 'qs'
 
 Config.Accounts = {
     bank = {
