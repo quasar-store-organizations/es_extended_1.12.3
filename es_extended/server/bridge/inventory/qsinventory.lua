@@ -1,10 +1,6 @@
 if Config.CustomInventory ~= 'qs' then return end
 MySQL.ready(function()
     ESX.Items = exports['qs-inventory']:GetItemList()
-    local items = MySQL.query.await('SELECT * FROM items')
-    for _, v in ipairs(items) do
-        ESX.Items[v.name] = { label = v.label, weight = v.weight, rare = v.rare, canRemove = v.can_remove }
-    end
 end)
 ---@diagnostic disable-next-line: duplicate-set-field
 ESX.GetItemLabel = function(item)
